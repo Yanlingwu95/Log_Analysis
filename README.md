@@ -80,7 +80,7 @@ ORDER BY Percent_Error DESC;
 | Column        | Type  |
 | :------------ | :---- |
 | date          | date  |
-| Percent Error | float |
+| Percent_Error | float |
 
 #### Run the queries:
 
