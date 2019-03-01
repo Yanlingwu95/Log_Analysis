@@ -1,7 +1,7 @@
 CREATE view article_view_number AS
 SELECT title, author, COUNT(*) AS views
 FROM articles, log
-WHERE log.path LIKE CONCAT('%', articles.slug)
+WHERE log.path = CONCAT('/article/', articles.slug)
 GROUP BY articles.title, articles.author
 ORDER BY views DESC;
 

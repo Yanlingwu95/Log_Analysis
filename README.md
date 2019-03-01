@@ -27,7 +27,7 @@ The project in Udacity's full stack web development nanodegree program.
 
 #### Launching the Virtual Machine:
 
-    1. Launch the Vagrant VM inside Vagrant sub-directory in the downloaded fullstack-nanodegree-vm repository using command:
+1. Launch the Vagrant VM inside Vagrant sub-directory in the downloaded fullstack-nanodegree-vm repository using command:
 
   ```
     $ vagrant up
@@ -57,7 +57,7 @@ The project in Udacity's full stack web development nanodegree program.
 CREATE view article_view_number AS
 SELECT title, author, COUNT(*) AS views
 FROM articles, log
-WHERE log.path LIKE CONCAT('%', articles.slug)
+WHERE log.path = CONCAT('/article/', articles.slug)
 GROUP BY articles.title, articles.author
 ORDER BY views DESC;
 ```
@@ -71,6 +71,7 @@ ORDER BY views DESC;
 - Create view error_log using: 
 
 ``` 
+CREATE view error_log AS 
 SELECT date(log.time), ROUND(100.0*SUM(case log.status WHEN '200 OK' then 0 else 1 END)/COUNT(log.status), 2) AS Percent_Error
 FROM log
 GROUP BY date(log.time)
