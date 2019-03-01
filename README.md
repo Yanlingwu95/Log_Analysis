@@ -32,12 +32,12 @@ The project in Udacity's full stack web development nanodegree program.
   ```
     $ vagrant up
   ```
-    2. Then Log into this using command:
+2. Then Log into this using command:
 
   ```
     $ vagrant ssh
   ```
-    3. Change directory to /vagrant and look around with `ls`.
+3. Change directory to /vagrant and look around with `ls`.
 
 #### Explore the dataset:
 
@@ -81,7 +81,7 @@ ORDER BY Percent_Error DESC;
 | Column        | Type  |
 | :------------ | :---- |
 | date          | date  |
-| Percent Error | float |
+| Percent_Error | float |
 
 #### Run the queries:
 
