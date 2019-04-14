@@ -41,13 +41,13 @@ def print_query_results(query_result):
 # """Print query's the results"""
   print (query_result['title'])
   for result in query_result['results']:
-    print ('\t' + str(result[0]) + '--->' + str(result[1]) + ' views')
+	print('"{article}" - {count} views'.format(article=result[0], count=result[1]))
 
 def print_error_query_results(query_result):
 #"""Print error query's results"""
   print (query_result['title'])
   for result in query_result['results']:
-    print ('\t' + str(result[0]) + '--->' + str(result[1]) + '%')
+	print('"{article}" - {count} %'.format(article=result[0], count=result[1]))
 
 # Store query results
 query1_result['results'] = get_query_result(query1)
